@@ -29,8 +29,10 @@
     </div>
 
     <!-- Services -->
-    <div id="services" class="mt-20 px-12">
-      <h2 class="text-3xl mb-10">Services</h2>
+    <div id="services" class="mt-20 px-6 md:px-12">
+      <div class="mb-10 border-b-4 border-green-700 w-full md:w-40">
+        <h2 class="text-3xl text-left md:text-center">Services</h2>
+      </div>
       <div class="max-w-7x; mx-auto lg:max-w-7xl">
         <div class="lg:grid lg:grid-cols-3 lg:gap-8">
           <div>
@@ -70,8 +72,10 @@
       </div>
     </div>
     <!-- About US -->
-    <div class="mt-20 px-12">
-      <h2 class="text-3xl mb-10">About Us</h2>
+    <div class="mt-20 px-6 md:px-12">
+      <div class="mb-10 border-b-4 border-orange-500 w-full md:w-40">
+        <h2 class="text-3xl text-right md:text-center">About Us</h2>
+      </div>
       <div class="relative bg-gray-800">
         <div class="h-56 bg-indigo-600 sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2">
           <img class="w-full h-full object-cover" src="~/assets/img/about.jpg" alt="Support team" />
@@ -90,10 +94,12 @@
     </div>
 
     <!-- Testimonials -->
-    <div id="testimonials" class="mt-20 px-12">
-      <h2 class="text-3xl mb-10">Testimonials</h2>
+    <div id="testimonials" class="mt-20 px-6 md:px-12">
+      <div class="mb-10 border-b-4 border-green-700 w-full md:w-48">
+        <h2 class="text-3xl text-left md:text-center">Testimonials</h2>
+      </div>
       <div class="max-w-7xl mx-auto md:grid md:grid-cols-3 gap-8">
-        <div class="py-12 md:flex md:flex-col">
+        <div class="py-8 md:flex md:flex-col">
           <blockquote class="mt-8 md:flex-grow md:flex md:flex-col">
             <div class="relative text-lg leading-7 font-medium text-white md:flex-grow">
               <p
@@ -119,7 +125,7 @@
             </div>
           </blockquote>
         </div>
-        <div class="py-12 md:flex md:flex-col">
+        <div class="py-8 md:flex md:flex-col">
           <blockquote class="mt-8 md:flex-grow md:flex md:flex-col">
             <div class="relative text-lg leading-7 font-medium text-white md:flex-grow">
               <p
@@ -145,7 +151,7 @@
             </div>
           </blockquote>
         </div>
-        <div class="py-12 md:flex md:flex-col">
+        <div class="py-8 md:flex md:flex-col">
           <blockquote class="mt-8 md:flex-grow md:flex md:flex-col">
             <div class="relative text-lg leading-7 font-medium text-white md:flex-grow">
               <p
@@ -175,9 +181,11 @@
     </div>
 
     <!-- Contact -->
-    <div id="contacts" class="mt-20 px-12 mb-20">
-      <h2 class="text-3xl mb-10 text-center">Contact Us</h2>
-      <div class="bg-white border shadow-lg overflow-hidden sm:rounded-lg w-11/12 lg:w-1/2 mx-auto p-10">
+    <div id="contacts" class="mt-24 px-6 md:px-12 mb-20">
+      <div class="mb-10 mx-auto border-b-4 border-orange-500 w-full md:w-40">
+        <h2 class="text-3xl text-center">Contact</h2>
+      </div>
+      <div class="bg-white border shadow-lg overflow-hidden sm:rounded-lg w-full lg:w-1/2 mx-auto p-10">
         <div class="mt-6 grid grid-cols-1 row-gap-6 col-gap-4 sm:grid-cols-6">
           <div class="sm:col-span-3">
             <label for="first_name" class="block text-sm font-medium leading-5 text-gray-700">First name</label>
@@ -201,7 +209,7 @@
           </div>
 
           <div class="sm:col-span-6">
-            <label for="about" class="block text-sm font-medium leading-5 text-gray-700 sm:mt-px sm:pt-2">About</label>
+            <label for="about" class="block text-sm font-medium leading-5 text-gray-700 sm:mt-px sm:pt-2">Message</label>
             <div class="mt-1">
               <div class="max-w-full flex rounded-md shadow-sm">
                 <textarea id="about" rows="15" class="border rounded form-textarea block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"></textarea>

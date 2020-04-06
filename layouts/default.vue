@@ -2,8 +2,8 @@
   <div>
     <div x-data="{ open: false }" class="relative bg-white overflow-hidden">
       <div class="max-w-screen-7xl mx-auto">
-        <div class="fixed z-10 pb-5 w-full bg-gray-100">
-          <div class="pt-6 px-4 sm:px-6 lg:px-8">
+        <div class="fixed z-10 pb-2 md:pb-6 w-full bg-gray-100">
+          <div class="pt-2 md:pt-6 px-4 sm:px-6 lg:px-8">
             <nav class="relative flex items-center justify-between sm:h-10">
               <div class="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
                 <div class="flex items-center justify-between w-full md:w-auto">
