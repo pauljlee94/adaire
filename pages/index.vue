@@ -5,42 +5,53 @@
       <div class="px-16 sm:text-center lg:text-left">
         <h2 class="text-4xl tracking-tight leading-10 font-extrabold text-white sm:text-5xl sm:leading-none md:text-6xl">
           The
-          <span class="text-green-600">BISTRO</span> at
+          <span class="text-green-600">BiSTRO</span> at
           <span class="text-orange-400">ADAiRE</span>
         </h2>
         <p
-          class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0"
+          class="mt-3 text-base text-gray-300 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0"
         >Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.</p>
         <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
           <div class="mt-3 sm:mt-0 sm:ml-3">
-            <a
-              href="#"
+            <nuxt-link
+              to="/#services"
               class="w-full flex items-center justify-center px-8 py-3 border-2 border-transparent text-base leading-6 bg-white font-medium rounded-md text-gray-800 hover:text-green-600 hover:border-green-600 transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10"
-            >Services</a>
+            >Services</nuxt-link>
           </div>
           <div class="mt-3 sm:mt-0 sm:ml-3">
-            <a
-              href="#"
+            <nuxt-link
+              to="/#contact"
               class="w-full flex items-center justify-center px-8 py-3 border-2 border-transparent text-base leading-6 bg-white font-medium rounded-md text-gray-800 hover:text-orange-500 hover:border-orange-500 transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10"
-            >Contact Us</a>
+            >Contact Us</nuxt-link>
           </div>
         </div>
       </div>
     </div>
 
     <!-- Services -->
-    <div id="services" class="mt-20 px-6 md:px-12">
+    <div id="services" class="pt-32 px-6 md:px-12">
       <div class="mb-10 border-b-4 border-green-700 w-full md:w-40">
         <h2 class="text-3xl text-left md:text-center">Services</h2>
       </div>
       <div class="max-w-7x; mx-auto lg:max-w-7xl">
-        <div class="lg:grid lg:grid-cols-3 lg:gap-8">
+        <div class="lg:grid lg:grid-cols-4 lg:gap-8">
+          <div class="mt-10 lg:mt-0">
+            <div class="flex items-center justify-center rounded-md bg-indigo-500 text-white">
+              <img src="~/assets/img/hero.jpg" alt />
+            </div>
+            <div class="mt-5">
+              <h3 class="text-lg leading-6 font-medium text-gray-900">Lunch</h3>
+              <p
+                class="mt-2 text-base leading-6 text-gray-500"
+              >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.</p>
+            </div>
+          </div>
           <div>
             <div class="flex items-center justify-center rounded-md bg-indigo-500 text-white">
               <img src="~/assets/img/hero.jpg" alt />
             </div>
             <div class="mt-5">
-              <h3 class="text-lg leading-6 font-medium text-gray-900">Competitive exchange rates</h3>
+              <h3 class="text-lg leading-6 font-medium text-gray-900">Corporate Catering</h3>
               <p
                 class="mt-2 text-base leading-6 text-gray-500"
               >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.</p>
@@ -51,7 +62,7 @@
               <img src="~/assets/img/hero.jpg" alt />
             </div>
             <div class="mt-5">
-              <h3 class="text-lg leading-6 font-medium text-gray-900">No hidden fees</h3>
+              <h3 class="text-lg leading-6 font-medium text-gray-900">Take Home Meals</h3>
               <p
                 class="mt-2 text-base leading-6 text-gray-500"
               >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.</p>
@@ -62,7 +73,7 @@
               <img src="~/assets/img/hero.jpg" alt />
             </div>
             <div class="mt-5">
-              <h3 class="text-lg leading-6 font-medium text-gray-900">Transfers are instant</h3>
+              <h3 class="text-lg leading-6 font-medium text-gray-900">Private Dinners at the BiSTRO</h3>
               <p
                 class="mt-2 text-base leading-6 text-gray-500"
               >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.</p>
@@ -72,7 +83,7 @@
       </div>
     </div>
     <!-- About US -->
-    <div class="mt-20 px-6 md:px-12">
+    <div id="about" class="pt-32 px-6 md:px-12">
       <div class="mb-10 border-b-4 border-orange-500 w-full md:w-40">
         <h2 class="text-3xl text-right md:text-center">About Us</h2>
       </div>
@@ -94,7 +105,7 @@
     </div>
 
     <!-- Testimonials -->
-    <div id="testimonials" class="mt-20 px-6 md:px-12">
+    <div id="testimonials" class="pt-32 px-6 md:px-12">
       <div class="mb-10 border-b-4 border-green-700 w-full md:w-48">
         <h2 class="text-3xl text-left md:text-center">Testimonials</h2>
       </div>
@@ -181,7 +192,7 @@
     </div>
 
     <!-- Contact -->
-    <div id="contacts" class="mt-24 px-6 md:px-12 mb-20">
+    <div id="contact" class="pt-32 px-6 md:px-12 mb-32">
       <div class="mb-10 mx-auto border-b-4 border-orange-500 w-full md:w-40">
         <h2 class="text-3xl text-center">Contact</h2>
       </div>
