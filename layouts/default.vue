@@ -13,7 +13,7 @@
                   </nuxt-link>
                   <div class="-mr-2 flex items-center md:hidden">
                     <button
-                      @click="open = true"
+                      @click="mobileOpen = true"
                       type="button"
                       class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out"
                     >
@@ -25,10 +25,7 @@
                 </div>
               </div>
               <div class="hidden md:block md:ml-10 md:pr-4">
-                <nuxt-link
-                  to="/#services"
-                  class="font-medium text-gray-900 hover:text-green-600 hover:underline focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out"
-                >Services</nuxt-link>
+                <nuxt-link to="/#services" class="font-medium text-gray-900 hover:text-green-600 hover:underline focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out">Services</nuxt-link>
                 <nuxt-link to="/#about" class="ml-8 font-medium text-gray-900 hover:text-green-600 hover:underline focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out">About Us</nuxt-link>
                 <nuxt-link
                   to="/#testimonials"
@@ -39,11 +36,43 @@
               </div>
             </nav>
           </div>
+          <!-- Mobile Menu -->
+          <div v-if="mobileOpen" class="md:hidden">
+            <div @click="mobileOpen = false" class="fixed inset-0 z-30 transition-opacity ease-linear duration-300">
+              <div class="absolute inset-0 bg-gray-600 opacity-75"></div>
+            </div>
+            <div class="fixed inset-0 flex z-40">
+              <div class="flex-1 flex flex-col max-w-xs w-full pt-5 pb-4 bg-gray-900 transform ease-in-out duration-300">
+                <div class="absolute top-0 right-0 -mr-14 p-1">
+                  <button @click="mobileOpen = false" class="flex items-center justify-center h-12 w-12 rounded-full focus:outline-none focus:bg-gray-600" aria-label="Close sidebar">
+                    <svg class="h-6 w-6 text-white" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </button>
+                </div>
+                <div class="flex-shrink-0 flex items-center px-4">
+                  <img class="h-8 w-auto" src="/img/logos/workflow-logo-on-brand.svg" alt="Workflow" />
+                </div>
+                <div class="mt-5 flex-1 h-0 overflow-y-auto">
+                  <nav class="px-2">
+                    <a
+                      href="#"
+                      class="group flex items-center px-2 py-2 text-base leading-6 font-medium rounded-md text-white transition ease-in-out duration-150"
+                    >Dashboard</a>
+                  </nav>
+                </div>
+              </div>
+              <div class="flex-shrink-0 w-14">
+                <!-- Force sidebar to shrink to fit close icon -->
+              </div>
+            </div>
+          </div>
         </div>
         <!-- Main -->
         <nuxt />
       </div>
     </div>
+
     <!-- Footer -->
     <div class="bg-white border-t">
       <div class="max-w-screen-xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8">
@@ -104,3 +133,16 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      mobileOpen: false
+    }
+  }
+}
+</script>
+
+<style lang="scss" scoped>
+</style>

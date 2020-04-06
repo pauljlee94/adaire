@@ -34,45 +34,45 @@
         <h2 class="text-3xl text-left md:text-center">Services</h2>
       </div>
       <div class="max-w-7x; mx-auto lg:max-w-7xl">
-        <div class="lg:grid lg:grid-cols-4 lg:gap-8">
-          <div class="mt-10 lg:mt-0">
+        <div class="md:grid md:grid-cols-2 xl:grid-cols-4 md:gap-8">
+          <div class="mt-10 md:mt-0">
             <div class="flex items-center justify-center rounded-md bg-indigo-500 text-white">
               <img src="~/assets/img/hero.jpg" alt />
             </div>
-            <div class="mt-5">
+            <div class="mt-3">
               <h3 class="text-lg leading-6 font-medium text-gray-900">Lunch</h3>
               <p
                 class="mt-2 text-base leading-6 text-gray-500"
               >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.</p>
             </div>
           </div>
-          <div>
+          <div class="mt-10 md:mt-0">
             <div class="flex items-center justify-center rounded-md bg-indigo-500 text-white">
               <img src="~/assets/img/hero.jpg" alt />
             </div>
-            <div class="mt-5">
+            <div class="mt-3">
               <h3 class="text-lg leading-6 font-medium text-gray-900">Corporate Catering</h3>
               <p
                 class="mt-2 text-base leading-6 text-gray-500"
               >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.</p>
             </div>
           </div>
-          <div class="mt-10 lg:mt-0">
+          <div class="mt-10 md:mt-0">
             <div class="flex items-center justify-center rounded-md bg-indigo-500 text-white">
               <img src="~/assets/img/hero.jpg" alt />
             </div>
-            <div class="mt-5">
+            <div class="mt-3">
               <h3 class="text-lg leading-6 font-medium text-gray-900">Take Home Meals</h3>
               <p
                 class="mt-2 text-base leading-6 text-gray-500"
               >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.</p>
             </div>
           </div>
-          <div class="mt-10 lg:mt-0">
+          <div class="mt-10 md:mt-0">
             <div class="flex items-center justify-center rounded-md bg-indigo-500 text-white">
               <img src="~/assets/img/hero.jpg" alt />
             </div>
-            <div class="mt-5">
+            <div class="mt-3">
               <h3 class="text-lg leading-6 font-medium text-gray-900">Private Dinners at the BiSTRO</h3>
               <p
                 class="mt-2 text-base leading-6 text-gray-500"
