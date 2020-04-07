@@ -29,14 +29,14 @@
     </div>
 
     <!-- Services -->
-    <div id="services" class="pt-32 px-6 md:px-12">
+    <div id="services" class="pt-20 md:pt-32 px-6 md:px-12">
       <div class="mb-10 border-b-4 border-green-700 w-full md:w-40">
         <h2 class="text-3xl text-left md:text-center">Services</h2>
       </div>
       <div class="max-w-7x; mx-auto lg:max-w-7xl">
         <div class="md:grid md:grid-cols-2 xl:grid-cols-4 md:gap-8">
           <div class="mt-10 md:mt-0">
-            <div class="flex items-center justify-center rounded-md bg-indigo-500 text-white">
+            <div class="flex items-center justify-center rounded-md">
               <img src="~/assets/img/hero.jpg" alt />
             </div>
             <div class="mt-3">
@@ -47,7 +47,7 @@
             </div>
           </div>
           <div class="mt-10 md:mt-0">
-            <div class="flex items-center justify-center rounded-md bg-indigo-500 text-white">
+            <div class="flex items-center justify-center rounded-md">
               <img src="~/assets/img/hero.jpg" alt />
             </div>
             <div class="mt-3">
@@ -58,7 +58,7 @@
             </div>
           </div>
           <div class="mt-10 md:mt-0">
-            <div class="flex items-center justify-center rounded-md bg-indigo-500 text-white">
+            <div class="flex items-center justify-center rounded-md">
               <img src="~/assets/img/hero.jpg" alt />
             </div>
             <div class="mt-3">
@@ -69,7 +69,7 @@
             </div>
           </div>
           <div class="mt-10 md:mt-0">
-            <div class="flex items-center justify-center rounded-md bg-indigo-500 text-white">
+            <div class="flex items-center justify-center rounded-md">
               <img src="~/assets/img/hero.jpg" alt />
             </div>
             <div class="mt-3">
@@ -83,7 +83,7 @@
       </div>
     </div>
     <!-- About US -->
-    <div id="about" class="pt-32 px-6 md:px-12">
+    <div id="about" class="pt-20 md:pt-32 px-6 md:px-12">
       <div class="mb-10 border-b-4 border-orange-500 w-full md:w-40">
         <h2 class="text-3xl text-right md:text-center">About Us</h2>
       </div>
@@ -105,7 +105,7 @@
     </div>
 
     <!-- Testimonials -->
-    <div id="testimonials" class="pt-32 px-6 md:px-12">
+    <div id="testimonials" class="pt-20 md:pt-32 px-6 md:px-12">
       <div class="mb-10 border-b-4 border-green-700 w-full md:w-48">
         <h2 class="text-3xl text-left md:text-center">Testimonials</h2>
       </div>
@@ -192,7 +192,7 @@
     </div>
 
     <!-- Contact -->
-    <div id="contact" class="pt-32 px-6 md:px-12 mb-32">
+    <div id="contact" class="pt-20 md:pt-32 px-6 md:px-12 mb-32">
       <div class="mb-10 mx-auto border-b-4 border-orange-500 w-full md:w-40">
         <h2 class="text-3xl text-center">Contact</h2>
       </div>
@@ -241,12 +241,45 @@
 </template>
 
 <script>
-import Logo from "~/components/Logo.vue"
-
 export default {
-  components: {
-    Logo
-  }
+  // mounted() {
+  //   var self = this
+  //   document.body.onscroll = function() {
+  //      if (
+  //       document.getElementById("services").offsetTop >
+  //       window.scrollY
+  //     ) {
+  //       history.pushState({}, null, self.$route.path)
+  //     }
+  //     if (
+  //       document.getElementById("services").offsetTop <
+  //       window.scrollY &&
+  //       window.scrollY < document.getElementById("about").offsetTop
+  //     ) {
+  //       history.pushState({}, null, self.$route.path + "#services")
+  //     }
+  //      if (
+  //       document.getElementById("about").offsetTop <
+  //       window.scrollY &&
+  //       window.scrollY < document.getElementById("testimonials").offsetTop
+  //     ) {
+  //       history.pushState({}, null, self.$route.path + "#about")
+  //     }
+  //      if (
+  //       document.getElementById("testimonials").offsetTop <
+  //       window.scrollY &&
+  //       window.scrollY < document.getElementById("contact").offsetTop
+  //     ) {
+  //       history.pushState({}, null, self.$route.path + "#testimonials")
+  //     }
+  //      if (
+  //       document.getElementById("contact").offsetTop <
+  //       window.scrollY
+  //     ) {
+  //       history.pushState({}, null, self.$route.path + "#contact")
+  //     }
+  //   }
+  // }
 }
 </script>
 

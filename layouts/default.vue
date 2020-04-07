@@ -1,9 +1,9 @@
 <template>
   <div>
-    <div x-data="{ open: false }" class="relative bg-white overflow-hidden">
+    <div class="relative bg-white overflow-hidden">
       <div class="max-w-screen-7xl mx-auto">
         <div class="fixed z-10 pb-4 md:pb-6 w-full bg-gray-100">
-          <div class="pt-4 md:pt-6 px-4 sm:px-6 lg:px-8">
+          <div class="pt-4 md:pt-6 px-6 md:px-12">
             <nav class="relative flex items-center justify-between sm:h-10">
               <div class="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
                 <div class="flex items-center justify-between w-full md:w-auto">
@@ -15,9 +15,9 @@
                     <button
                       @click="mobileOpen = true"
                       type="button"
-                      class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out"
+                      class="inline-flex items-center justify-center p-2 border rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out"
                     >
-                      <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                      <svg class="h-6 w-6 text-gray-700" stroke="currentColor" fill="none" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                       </svg>
                     </button>
@@ -25,48 +25,77 @@
                 </div>
               </div>
               <div class="hidden md:block md:ml-10 md:pr-4">
-                <nuxt-link to="/#services" class="font-medium text-gray-900 hover:text-green-600 hover:underline focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out">Services</nuxt-link>
-                <nuxt-link to="/#about" class="ml-8 font-medium text-gray-900 hover:text-green-600 hover:underline focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out">About Us</nuxt-link>
+                <nuxt-link to="/#services" class="font-medium text-gray-900 hover:text-green-600 hover:underline transition duration-150 ease-in-out">Services</nuxt-link>
+                <nuxt-link to="/#about" class="ml-8 font-medium text-gray-900 hover:text-green-600 hover:underline transition duration-150 ease-in-out">About Us</nuxt-link>
+                <nuxt-link to="/#testimonials" class="ml-8 font-medium text-gray-900 hover:text-green-600 hover:underline transition duration-150 ease-in-out">Testimonials</nuxt-link>
                 <nuxt-link
-                  to="/#testimonials"
-                  class="ml-8 font-medium text-gray-900 hover:text-green-600 hover:underline focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out"
-                >Testimonials</nuxt-link>
-                <nuxt-link to="/blog" class="ml-8 font-medium text-gray-900 hover:text-green-600 hover:underline focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out">Blog</nuxt-link>
-                <nuxt-link to="/#contact" class="ml-8 font-medium text-gray-900 hover:text-green-600 hover:underline focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out">Contact</nuxt-link>
+                  to="/blog"
+                  :class="$route.path == '/blog' ? 'text-green-600 underline' : null"
+                  class="ml-8 font-medium text-gray-900 hover:text-green-600 hover:underline transition duration-150 ease-in-out"
+                >Blog</nuxt-link>
+                <nuxt-link to="/#contact" class="ml-8 font-medium text-gray-900 hover:text-green-600 hover:underline transition duration-150 ease-in-out">Contact</nuxt-link>
               </div>
             </nav>
           </div>
           <!-- Mobile Menu -->
-          <div v-if="mobileOpen" class="md:hidden">
-            <div @click="mobileOpen = false" class="fixed inset-0 z-30 transition-opacity ease-linear duration-300">
-              <div class="absolute inset-0 bg-gray-600 opacity-75"></div>
-            </div>
-            <div class="fixed inset-0 flex z-40">
-              <div class="flex-1 flex flex-col max-w-xs w-full pt-5 pb-4 bg-gray-900 transform ease-in-out duration-300">
-                <div class="absolute top-0 right-0 -mr-14 p-1">
-                  <button @click="mobileOpen = false" class="flex items-center justify-center h-12 w-12 rounded-full focus:outline-none focus:bg-gray-600" aria-label="Close sidebar">
-                    <svg class="h-6 w-6 text-white" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                  </button>
+          <transition name="slide-in-right">
+            <div v-if="mobileOpen" class="md:hidden">
+              <div @click="mobileOpen = false" class="fixed inset-0 z-30 transition-opacity ease-linear duration-300">
+                <div class="absolute inset-0 bg-gray-600 opacity-75"></div>
+              </div>
+              <div class="fixed inset-0 flex z-40">
+                <div class="flex-1 flex flex-col max-w-xs w-full pt-5 pb-4 bg-gray-200 transform ease-in-out duration-300">
+                  <div class="absolute top-0 right-0 -mr-14 p-1">
+                    <button @click="mobileOpen = false" class="flex items-center justify-center h-12 w-12 rounded-full focus:outline-none focus:bg-gray-600" aria-label="Close sidebar">
+                      <svg class="h-6 w-6 text-gray-900" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="mt-5 flex-1 h-0 overflow-y-auto">
+                    <nav class="px-2">
+                      <nuxt-link
+                        @click.native="mobileOpen = false"
+                        to="/"
+                        class="group flex items-center px-2 py-2 text-base leading-6 font-medium rounded-md text-gray-900 transition ease-in-out duration-150"
+                      >
+                        <span class="border-b-2 border-orange-600 text-2xl">ADAiRE</span>
+                      </nuxt-link>
+                      <nuxt-link
+                        @click.native="mobileOpen = false"
+                        to="/#services"
+                        class="group flex items-center px-2 py-2 text-base leading-6 font-medium rounded-md text-gray-900 transition ease-in-out duration-150"
+                      >Services</nuxt-link>
+                      <nuxt-link
+                        @click.native="mobileOpen = false"
+                        to="/#about"
+                        class="group flex items-center px-2 py-2 text-base leading-6 font-medium rounded-md text-gray-900 transition ease-in-out duration-150"
+                      >About Us</nuxt-link>
+                      <nuxt-link
+                        @click.native="mobileOpen = false"
+                        to="/#testimonials"
+                        class="group flex items-center px-2 py-2 text-base leading-6 font-medium rounded-md text-gray-900 transition ease-in-out duration-150"
+                      >Testimonials</nuxt-link>
+                      <nuxt-link
+                        @click.native="mobileOpen = false"
+                        to="/blog"
+                        :class="$router.hash == '#' ? 'text-green-600 underline': null"
+                        class="group flex items-center px-2 py-2 text-base leading-6 font-medium rounded-md text-gray-900 transition ease-in-out duration-150"
+                      >Blog</nuxt-link>
+                      <nuxt-link
+                        @click.native="mobileOpen = false"
+                        to="/#contact"
+                        class="group flex items-center px-2 py-2 text-base leading-6 font-medium rounded-md text-gray-900 transition ease-in-out duration-150"
+                      >Contact</nuxt-link>
+                    </nav>
+                  </div>
                 </div>
-                <div class="flex-shrink-0 flex items-center px-4">
-                  <img class="h-8 w-auto" src="/img/logos/workflow-logo-on-brand.svg" alt="Workflow" />
-                </div>
-                <div class="mt-5 flex-1 h-0 overflow-y-auto">
-                  <nav class="px-2">
-                    <a
-                      href="#"
-                      class="group flex items-center px-2 py-2 text-base leading-6 font-medium rounded-md text-white transition ease-in-out duration-150"
-                    >Dashboard</a>
-                  </nav>
+                <div class="flex-shrink-0 w-14">
+                  <!-- Force sidebar to shrink to fit close icon -->
                 </div>
               </div>
-              <div class="flex-shrink-0 w-14">
-                <!-- Force sidebar to shrink to fit close icon -->
-              </div>
             </div>
-          </div>
+          </transition>
         </div>
         <!-- Main -->
         <nuxt />
@@ -76,24 +105,29 @@
     <!-- Footer -->
     <div class="bg-white border-t">
       <div class="max-w-screen-xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8">
-        <nav class="-mx-5 -my-2 flex flex-wrap justify-center">
+        <div class="flex justify-center">
+          <nuxt-link to="/">
+            <h2 class="text-3xl border-b-4 border-orange-600 leading-none px-1">ADAiRE</h2>
+          </nuxt-link>
+        </div>
+        <nav class="-mx-5 -my-2 flex flex-wrap justify-center mt-8">
           <div class="px-5 py-2">
-            <nuxt-link to="/#services" class="font-medium text-gray-900 hover:text-green-600 hover:underline focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out">Services</nuxt-link>
+            <nuxt-link to="/" class="text-base leading-6 text-gray-800 hover:text-gray-900">About</nuxt-link>
           </div>
           <div class="px-5 py-2">
-            <nuxt-link to="/#about" class="ml-8 font-medium text-gray-900 hover:text-green-600 hover:underline focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out">About Us</nuxt-link>
+            <nuxt-link to="/#services" class="text-base leading-6 text-gray-800 hover:text-gray-900">Services</nuxt-link>
           </div>
           <div class="px-5 py-2">
-            <nuxt-link
-              to="/#testimonials"
-              class="ml-8 font-medium text-gray-900 hover:text-green-600 hover:underline focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out"
-            >Testimonials</nuxt-link>
+            <nuxt-link to="/#about" class="text-base leading-6 text-gray-800 hover:text-gray-900">About Us</nuxt-link>
           </div>
           <div class="px-5 py-2">
-            <nuxt-link to="/blog" class="ml-8 font-medium text-gray-900 hover:text-green-600 hover:underline focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out">Blog</nuxt-link>
+            <nuxt-link to="/#testimonials" class="text-base leading-6 text-gray-800 hover:text-gray-900">Testimonials</nuxt-link>
           </div>
           <div class="px-5 py-2">
-            <nuxt-link to="/#contact" class="ml-8 font-medium text-gray-900 hover:text-green-600 hover:underline focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out">Contact</nuxt-link>
+            <nuxt-link to="/blog" class="text-base leading-6 text-gray-800 hover:text-gray-900">Blog</nuxt-link>
+          </div>
+          <div class="px-5 py-2">
+            <nuxt-link to="/#contact" class="text-base leading-6 text-gray-800 hover:text-gray-900">Contact</nuxt-link>
           </div>
         </nav>
         <div class="mt-8 flex justify-center">
@@ -144,5 +178,13 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
+.slide-in-right-enter-active,
+.slide-in-right-leave-active {
+  transition: opacity 0.2s;
+  transition-timing-function: ease-in-out;
+}
+.slide-in-right-enter, .slide-in-right-leave-to /* .slide-in-left-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
 </style>
