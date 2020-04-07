@@ -196,7 +196,7 @@
       <div class="mb-10 mx-auto border-b-4 border-orange-500 w-full md:w-40">
         <h2 class="text-3xl text-center">Contact</h2>
       </div>
-      <div class="bg-white border shadow-lg overflow-hidden sm:rounded-lg w-full lg:w-1/2 mx-auto p-10">
+      <div class="bg-white border  overflow-hidden sm:rounded-lg w-full lg:w-1/2 mx-auto p-10">
         <div class="mt-6 grid grid-cols-1 row-gap-6 col-gap-4 sm:grid-cols-6">
           <div class="sm:col-span-3">
             <label for="first_name" class="block text-sm font-medium leading-5 text-gray-700">First name</label>
@@ -241,49 +241,10 @@
 </template>
 
 <script>
-export default {
-  // mounted() {
-  //   var self = this
-  //   document.body.onscroll = function() {
-  //      if (
-  //       document.getElementById("services").offsetTop >
-  //       window.scrollY
-  //     ) {
-  //       history.pushState({}, null, self.$route.path)
-  //     }
-  //     if (
-  //       document.getElementById("services").offsetTop <
-  //       window.scrollY &&
-  //       window.scrollY < document.getElementById("about").offsetTop
-  //     ) {
-  //       history.pushState({}, null, self.$route.path + "#services")
-  //     }
-  //      if (
-  //       document.getElementById("about").offsetTop <
-  //       window.scrollY &&
-  //       window.scrollY < document.getElementById("testimonials").offsetTop
-  //     ) {
-  //       history.pushState({}, null, self.$route.path + "#about")
-  //     }
-  //      if (
-  //       document.getElementById("testimonials").offsetTop <
-  //       window.scrollY &&
-  //       window.scrollY < document.getElementById("contact").offsetTop
-  //     ) {
-  //       history.pushState({}, null, self.$route.path + "#testimonials")
-  //     }
-  //      if (
-  //       document.getElementById("contact").offsetTop <
-  //       window.scrollY
-  //     ) {
-  //       history.pushState({}, null, self.$route.path + "#contact")
-  //     }
-  //   }
-  // }
-}
+export default {}
 </script>
 
-<style >
+<style scoped>
 #hero {
   background-image: url("../assets/img/hero.jpg");
   background-size: cover;

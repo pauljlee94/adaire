@@ -106,11 +106,17 @@
     <div class="bg-white border-t">
       <div class="max-w-screen-xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8">
         <div class="flex justify-center">
-          <nuxt-link to="/">
-            <h2 class="text-3xl border-b-4 border-orange-600 leading-none px-1">ADAiRE</h2>
-          </nuxt-link>
+          <div class="text-center">
+            <nuxt-link to="/">
+              <h2 class="text-3xl border-b-4 border-orange-600 leading-none px-1">ADAiRE</h2>
+            </nuxt-link>
+            <p class="mt-2">1234 Some Street Blvd.</p>
+            <p>Alpharetta, GA 30000</p>
+            <p>tel: 123-123-1234</p>
+            <p>email: email@email.com</p>
+          </div>
         </div>
-        <nav class="-mx-5 -my-2 flex flex-wrap justify-center mt-8">
+        <nav class="-mx-5 -my-2 flex flex-wrap justify-center mt-10">
           <div class="px-5 py-2">
             <nuxt-link to="/" class="text-base leading-6 text-gray-800 hover:text-gray-900">About</nuxt-link>
           </div>
@@ -161,7 +167,7 @@
           </a>
         </div>
         <div class="mt-8">
-          <p class="text-center text-base leading-6 text-gray-400">&copy; 2020 Workflow, Inc. All rights reserved.</p>
+          <p class="text-center text-base leading-6 text-gray-400">&copy; {{new Date().getFullYear()}} ADAiRE, Inc. All rights reserved.</p>
         </div>
       </div>
     </div>
