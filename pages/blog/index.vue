@@ -104,7 +104,7 @@ export default {
       // Query to get home content
       const query = await api
         .query(Prismic.Predicates.at("document.type", "blog"), {
-          orderings: "[my.blog-post.date desc]"
+          orderings: "[document.first_publication_date desc]"
         })
         .then(posts => {
           blogPosts = posts.results
