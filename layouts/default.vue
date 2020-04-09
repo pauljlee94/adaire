@@ -3,6 +3,23 @@
     <div class="relative bg-white overflow-hidden">
       <div class="max-w-screen-7xl mx-auto">
         <div class="fixed z-10 pb-4 md:pb-6 w-full bg-gray-100">
+          <div v-if="!!breaking && breakingOpen" class="bg-red-500">
+            <div class="max-w-screen-xl mx-auto py-3 px-3 sm:px-6 lg:px-8">
+              <div class="pr-16 sm:text-center sm:px-16">
+                <p class="font-medium text-white">
+                  <nuxt-link :to="'/blog/' + breaking.id" @click.native="breakingOpen=false" class="inline underline">{{breaking.data.title[0].text}}</nuxt-link>
+                  <span>&rarr;</span>
+                </p>
+              </div>
+              <div class="absolute inset-y-0 right-0 pt-1 pr-1 flex items-start sm:pt-1 sm:pr-2 sm:items-start">
+                <button @click="breakingOpen = false" type="button" class="flex p-2 rounded-md hover:bg-indigo-500 focus:outline-none focus:bg-indigo-500 transition ease-in-out duration-150">
+                  <svg class="h-6 w-6 text-white" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
           <div class="pt-4 md:pt-6 px-6 md:px-12">
             <nav class="relative flex items-center justify-between sm:h-10">
               <div class="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
@@ -98,7 +115,9 @@
           </transition>
         </div>
         <!-- Main -->
+        <div :class="breakingOpen ? 'pt-12' : null">
         <nuxt />
+        </div>
       </div>
     </div>
 
@@ -175,10 +194,41 @@
 </template>
 
 <script>
+import Prismic from "prismic-javascript"
+import PrismicConfig from "@/prismic.config.js"
+
 export default {
   data() {
     return {
-      mobileOpen: false
+      mobileOpen: false,
+      breaking: null,
+      breakingOpen: true
+    }
+  },
+  async beforeMount() {
+    var breaking
+
+    const api = await Prismic.getApi(PrismicConfig.apiEndpoint)
+    console.log(api)
+    const query = await api
+      .query(Prismic.Predicates.at("my.blog.breaking", true))
+      .then(posts => {
+        breaking = posts.results[0]
+      })
+      .catch(error => {
+        console.log(error)
+      })
+
+    this.breaking = breaking
+  },
+
+  methods: {
+    formatDate(timestamp) {
+      const date = new Date(timestamp)
+      const month = date.getMonth() + 1
+      const day = date.getDate()
+      const year = date.getFullYear()
+      return month + "-" + day + "-" + year
     }
   }
 }
@@ -193,4 +243,4 @@ export default {
 .slide-in-right-enter, .slide-in-right-leave-to /* .slide-in-left-leave-active below version 2.1.8 */ {
   opacity: 0;
 }
-</style>
+</style> 
