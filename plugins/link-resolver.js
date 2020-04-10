@@ -7,13 +7,13 @@ export default function (doc) {
     return '/not-found'
   }
 
-  if (doc.type === 'homepage') {
-    return '/'
+  if (doc.type === 'blog') {
+    return '/blog/' + doc.uid
   }
 
-  if (doc.type === 'legal') {
-    return '/legal/' + doc.uid
+  if (doc.type === 'menu') {
+    return '/menu'
   }
 
-  return '/not-found'
+  return '/'
 }

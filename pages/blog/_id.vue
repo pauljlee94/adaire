@@ -4,10 +4,10 @@
       <div v-if="!!blogPost.data.image.url" class="image-container overflow-hidden">
         <img class="postImg w-full" :src="blogPost.data.image.url" alt />
       </div>
-      <div class="my-4">
+      <div class="my-4 px-6">
         <h2 class="text-4xl text-left font-medium text-gray-900">{{blogPost.data.title[0].text}}</h2>
         <p class="text-base leading-6 text-gray-500">{{formatDate(blogPost.first_publication_date)}}</p>
-        <p class="mt-2 text-base leading-6 text-gray-700">{{blogPost.data.content[0].text}}</p>
+        <prismic-rich-text :field="blogPost.data.content"/>
       </div>
       <div class="flex">
         <a href="#" class="text-gray-800 hover:text-gray-600">

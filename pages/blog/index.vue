@@ -5,8 +5,8 @@
     </div>
     <div class="py-12 px-6 md:px-12">
       <div class="flex justify-between items-center mb-4">
-        <span class="text-xs md:text-sm pr-2">Filter Posts:</span>
-        <div>
+        <label for="filters" class="text-xs md:text-sm pr-2">Filter Posts:</label>
+        <div id="filters">
           <label
             for="filter-1w"
             class="px-2 py-1 md:text-sm cursor-pointer font-medium text-xs leading-5 rounded-md transition ease-in-out duration-150"
@@ -134,9 +134,6 @@ export default {
     }
   },
 
-  beforeMount() {
-    console.log(Object.keys(this.blogPosts[0].data.image).length === 0 );
-  },
   methods: {
     formatDate(timestamp) {
       const date = new Date(timestamp)
