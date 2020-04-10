@@ -12,7 +12,7 @@
                 </p>
               </div>
               <div class="absolute inset-y-0 right-0 pt-1 pr-1 flex items-start sm:pt-1 sm:pr-2 sm:items-start">
-                <button @click="breakingOpen = false" type="button" class="flex p-2 rounded-md hover:bg-indigo-500 focus:outline-none focus:bg-indigo-500 transition ease-in-out duration-150">
+                <button @click="breakingOpen = false" type="button" class="flex p-2 rounded-md hover:bg-red-400 transition ease-in-out duration-150">
                   <svg class="h-6 w-6 text-white" stroke="currentColor" fill="none" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                   </svg>
@@ -41,16 +41,21 @@
                   </div>
                 </div>
               </div>
-              <div class="hidden md:block md:ml-10 md:pr-4">
+              <div class="hidden md:block md:ml-10">
                 <nuxt-link to="/#services" class="font-medium text-gray-900 hover:text-green-600 hover:underline transition duration-150 ease-in-out">Services</nuxt-link>
-                <nuxt-link to="/#about" class="ml-8 font-medium text-gray-900 hover:text-green-600 hover:underline transition duration-150 ease-in-out">About Us</nuxt-link>
-                <nuxt-link to="/#testimonials" class="ml-8 font-medium text-gray-900 hover:text-green-600 hover:underline transition duration-150 ease-in-out">Testimonials</nuxt-link>
+                <nuxt-link to="/#about" class="ml-4 xl:ml-8 font-medium text-gray-900 hover:text-green-600 hover:underline transition duration-150 ease-in-out">About Us</nuxt-link>
+                <nuxt-link to="/#testimonials" class="ml-4 xl:ml-8 font-medium text-gray-900 hover:text-green-600 hover:underline transition duration-150 ease-in-out">Testimonials</nuxt-link>
+                <nuxt-link
+                  to="/menu"
+                  :class="$route.path == '/menu' ? 'text-green-600 underline' : null"
+                  class="ml-4 xl:ml-8 font-medium text-gray-900 hover:text-green-600 hover:underline transition duration-150 ease-in-out"
+                >Menu</nuxt-link>
                 <nuxt-link
                   to="/blog"
                   :class="$route.path == '/blog' ? 'text-green-600 underline' : null"
-                  class="ml-8 font-medium text-gray-900 hover:text-green-600 hover:underline transition duration-150 ease-in-out"
+                  class="ml-4 xl:ml-8 font-medium text-gray-900 hover:text-green-600 hover:underline transition duration-150 ease-in-out"
                 >Blog</nuxt-link>
-                <nuxt-link to="/#contact" class="ml-8 font-medium text-gray-900 hover:text-green-600 hover:underline transition duration-150 ease-in-out">Contact</nuxt-link>
+                <nuxt-link to="/#contact" class="ml-4 xl:ml-8 font-medium text-gray-900 hover:text-green-600 hover:underline transition duration-150 ease-in-out">Contact</nuxt-link>
               </div>
             </nav>
           </div>
@@ -95,8 +100,12 @@
                       >Testimonials</nuxt-link>
                       <nuxt-link
                         @click.native="mobileOpen = false"
+                        to="/menu"
+                        class="group flex items-center px-2 py-2 text-base leading-6 font-medium rounded-md text-gray-900 transition ease-in-out duration-150"
+                      >Menu</nuxt-link>
+                      <nuxt-link
+                        @click.native="mobileOpen = false"
                         to="/blog"
-                        :class="$router.hash == '#' ? 'text-green-600 underline': null"
                         class="group flex items-center px-2 py-2 text-base leading-6 font-medium rounded-md text-gray-900 transition ease-in-out duration-150"
                       >Blog</nuxt-link>
                       <nuxt-link
@@ -116,7 +125,7 @@
         </div>
         <!-- Main -->
         <div :class="breakingOpen ? 'pt-12' : null">
-        <nuxt />
+          <nuxt />
         </div>
       </div>
     </div>
@@ -147,6 +156,9 @@
           </div>
           <div class="px-5 py-2">
             <nuxt-link to="/#testimonials" class="text-base leading-6 text-gray-800 hover:text-gray-900">Testimonials</nuxt-link>
+          </div>
+          <div class="px-5 py-2">
+            <nuxt-link to="/menu" class="text-base leading-6 text-gray-800 hover:text-gray-900">Menu</nuxt-link>
           </div>
           <div class="px-5 py-2">
             <nuxt-link to="/blog" class="text-base leading-6 text-gray-800 hover:text-gray-900">Blog</nuxt-link>

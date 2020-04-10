@@ -1,7 +1,7 @@
 <template>
   <div class="pt-16 md:pt-32">
     <div class="flex flex-col md:w-2/3 xl:w-1/2 mx-auto mb-20">
-      <div class="image-container overflow-hidden">
+      <div v-if="!!blogPost.data.image.url" class="image-container overflow-hidden">
         <img class="postImg w-full" :src="blogPost.data.image.url" alt />
       </div>
       <div class="my-4">

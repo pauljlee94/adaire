@@ -66,7 +66,8 @@
           <!-- Post -->
           <nuxt-link :to="'/blog/' + post.id" v-for="post in filteredPosts" :key="post.id" class="relative border">
             <div class="h-64 overflow-hidden border-b">
-              <img class="w-full postImg" :src="post.data.image.url" alt />
+              <img v-if="Object.keys(post.data.image).length === 0" src="../../assets/img/blogpost.jpg"/>
+              <img v-else class="w-full postImg" :src="post.data.image.url" alt />
             </div>
             <div class="mt-5 px-4 pb-4 h-48">
               <h2 class="text-lg leading-6 font-medium text-gray-900">{{post.data.title[0].text}}</h2>
@@ -134,9 +135,7 @@ export default {
   },
 
   beforeMount() {
-    console.log(
-      new Date(this.blogPosts[0].first_publication_date).getTime() / 1000
-    )
+    console.log(Object.keys(this.blogPosts[0].data.image).length === 0 );
   },
   methods: {
     formatDate(timestamp) {
@@ -153,7 +152,7 @@ export default {
 
 <style scoped>
 #hero {
-  background-image: url("../../assets/img/hero.jpg");
+  background-image: url("../../assets/img/blog.jpg");
   background-size: cover;
   box-shadow: inset 0 0 0 2000px rgba(31, 31, 31, 0.603);
   height: 400px;

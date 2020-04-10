@@ -37,7 +37,7 @@
         <div class="md:grid md:grid-cols-2 xl:grid-cols-4 md:gap-8">
           <div class="mt-10 md:mt-0">
             <div class="flex items-center justify-center rounded-md">
-              <img src="~/assets/img/hero.jpg" alt />
+              <img src="~/assets/img/lunch.jpg" alt />
             </div>
             <div class="mt-3">
               <h3 class="text-lg leading-6 font-medium text-gray-900">Lunch</h3>
@@ -48,7 +48,7 @@
           </div>
           <div class="mt-10 md:mt-0">
             <div class="flex items-center justify-center rounded-md">
-              <img src="~/assets/img/hero.jpg" alt />
+              <img src="~/assets/img/catering.jpg" alt />
             </div>
             <div class="mt-3">
               <h3 class="text-lg leading-6 font-medium text-gray-900">Corporate Catering</h3>
@@ -59,7 +59,7 @@
           </div>
           <div class="mt-10 md:mt-0">
             <div class="flex items-center justify-center rounded-md">
-              <img src="~/assets/img/hero.jpg" alt />
+              <img src="~/assets/img/home.jpg" alt />
             </div>
             <div class="mt-3">
               <h3 class="text-lg leading-6 font-medium text-gray-900">Take Home Meals</h3>
@@ -70,7 +70,7 @@
           </div>
           <div class="mt-10 md:mt-0">
             <div class="flex items-center justify-center rounded-md">
-              <img src="~/assets/img/hero.jpg" alt />
+              <img src="~/assets/img/dinner.jpg" alt />
             </div>
             <div class="mt-3">
               <h3 class="text-lg leading-6 font-medium text-gray-900">Private Dinners at the BiSTRO</h3>
@@ -231,7 +231,7 @@
           <div class="inline-flex rounded-md shadow-sm sm:col-span-6">
             <button
               type="button"
-              class="w-full inline-flex items-center justify-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition ease-in-out duration-150"
+              class="w-full inline-flex items-center justify-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-white bg-orange-500 hover:bg-orange-400 transition ease-in-out duration-150"
             >Send Message</button>
           </div>
         </div>
@@ -241,7 +241,9 @@
 </template>
 
 <script>
-export default {}
+export default {
+  layout:"default"
+}
 </script>
 
 <style scoped>
