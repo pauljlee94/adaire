@@ -196,45 +196,45 @@
       <div class="mb-10 mx-auto border-b-4 border-orange-500 w-full md:w-40">
         <h2 class="text-3xl text-center">Contact</h2>
       </div>
-      <div class="bg-white border  overflow-hidden sm:rounded-lg w-full lg:w-1/2 mx-auto p-10">
-        <div class="mt-6 grid grid-cols-1 row-gap-6 col-gap-4 sm:grid-cols-6">
+      <div class="bg-white border overflow-hidden sm:rounded-lg w-full lg:w-1/2 mx-auto p-10">
+        <form class="mt-6 grid grid-cols-1 row-gap-6 col-gap-4 sm:grid-cols-6" accept-charset="utf-8" action="https://formspree.io/pauljlee94@gmail.com" method="post">
           <div class="sm:col-span-3">
             <label for="first_name" class="block text-sm font-medium leading-5 text-gray-700">First name</label>
             <div class="mt-1">
-              <input id="first_name" class="border rounded form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5" />
+              <input id="first_name" name="first_name" class="border rounded form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5" />
             </div>
           </div>
 
           <div class="sm:col-span-3">
             <label for="last_name" class="block text-sm font-medium leading-5 text-gray-700">Last name</label>
             <div class="mt-1">
-              <input id="last_name" class="border rounded form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5" />
+              <input id="last_name" name="last_name" class="border rounded form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5" />
             </div>
           </div>
 
           <div class="sm:col-span-6">
             <label for="email" class="block text-sm font-medium leading-5 text-gray-700">Email address</label>
             <div class="mt-1">
-              <input id="email" type="email" class="border rounded form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5" />
+              <input id="email" name="email" type="email" class="border rounded form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5" />
             </div>
           </div>
 
           <div class="sm:col-span-6">
-            <label for="about" class="block text-sm font-medium leading-5 text-gray-700 sm:mt-px sm:pt-2">Message</label>
+            <label for="message" class="block text-sm font-medium leading-5 text-gray-700 sm:mt-px sm:pt-2">Message</label>
             <div class="mt-1">
               <div class="max-w-full flex rounded-md shadow-sm">
-                <textarea id="about" rows="15" class="border rounded form-textarea block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"></textarea>
+                <textarea id="message" name="message" rows="15" class="border rounded form-textarea block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"></textarea>
               </div>
               <p class="mt-2 text-sm text-gray-500">Write a few sentences about yourself.</p>
             </div>
           </div>
           <div class="inline-flex rounded-md shadow-sm sm:col-span-6">
             <button
-              type="button"
+              type="submit"
               class="w-full inline-flex items-center justify-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-white bg-orange-500 hover:bg-orange-400 transition ease-in-out duration-150"
             >Send Message</button>
           </div>
-        </div>
+        </form>
       </div>
     </div>
   </div>
@@ -242,7 +242,7 @@
 
 <script>
 export default {
-  layout:"default"
+  layout: "default",
 }
 </script>
 
