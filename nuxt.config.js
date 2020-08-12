@@ -69,7 +69,7 @@ css: [
 ** Plugins to load before mounting the App
 */
 plugins: [
-  '~/plugins/prismic-vue.js',
+  '~/plugins/prismic-vue.js'
 ],
 
 /*

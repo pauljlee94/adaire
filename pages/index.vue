@@ -94,7 +94,7 @@
         <div class="relative max-w-screen-xl mx-auto px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
           <div class="md:ml-auto md:w-1/2 md:pl-10">
             <div class="text-base leading-6 font-semibold uppercase tracking-wider text-gray-300">Award winning support</div>
-            <h2 class="mt-2 text-white text-3xl leading-9 font-extrabold tracking-tight sm:text-4xl sm:leading-10">We’re here to help</h2>
+            <h3 class="mt-2 text-white text-3xl leading-9 font-extrabold tracking-tight sm:text-4xl sm:leading-10">We’re here to help</h3>
             <p
               class="mt-3 text-lg leading-7 text-gray-300"
             >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, egestas tempus tellus etiam sed. Quam a scelerisque amet ullamcorper eu enim et fermentum, augue. Aliquet amet volutpat quisque ut interdum tincidunt duis.</p>
